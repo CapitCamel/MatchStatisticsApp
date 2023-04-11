@@ -18,7 +18,7 @@ class StatisticFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentStatisticBinding.inflate(inflater, container, false)
         binding.btn.setOnClickListener {
             showStatistic()
@@ -29,17 +29,17 @@ class StatisticFragment : Fragment() {
     private fun showStatistic(){
         if (binding.editWin1.text.toString() != "") {
             winsTeam1 = binding.editWin1.text.toString().toInt()
-        }else winsTeam1 = 0
-        if(binding.editWin2.text.toString() != "") {
+        } else winsTeam1 = 0
+        if (binding.editWin2.text.toString() != "") {
             winsTeam2 = binding.editWin2.text.toString().toInt()
-        }else winsTeam2 = 0
-        if(binding.editWin3.text.toString() != "") {
+        } else winsTeam2 = 0
+        if (binding.editWin3.text.toString() != "") {
             draw = binding.editWin3.text.toString().toInt()
-        }else draw = 0
+        } else draw = 0
 
         val sumMatches = winsTeam1 + winsTeam2 + draw
 
-        if(sumMatches != 0) {
+        if (sumMatches != 0) {
             val x1 = winsTeam1 * 100 / sumMatches
             val x2 = winsTeam2 * 100 / sumMatches
             val x3 = draw * 100 / sumMatches
@@ -50,7 +50,8 @@ class StatisticFragment : Fragment() {
             binding.wins2Circle.text = winsTeam2.toString()
             binding.wins3Circle.text = draw.toString()
             binding.statistics.visibility = View.VISIBLE
-        }else  binding.statistics.visibility = View.GONE
+        } else
+            binding.statistics.visibility = View.GONE
     }
 
 }
