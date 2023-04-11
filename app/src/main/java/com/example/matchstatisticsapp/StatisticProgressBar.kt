@@ -21,7 +21,6 @@ class StatisticProgressBar @JvmOverloads constructor(
     private var textPaint = TextPaint()
 
     private lateinit var container: RectF
-//    private var currentProgressValue: Float = 0.0f
 
     private var typedArray: TypedArray? = null
 
@@ -41,15 +40,10 @@ class StatisticProgressBar @JvmOverloads constructor(
 
     private fun initAttributes() {
         typedArray?.apply {
-//            currentProgressValue =
-//                kotlin.math.abs(getInt(R.styleable.StatisticBar_ppb_percentage, 50))
-//                    .coerceIn(0, 100)
-//                    .toFloat()
-
-            team2Paint.color =
+            team1Paint.color =
                 getColor(R.styleable.StatisticBar_team1Color, Color.GREEN)
 
-            team1Paint.color =
+            team2Paint.color =
                 getColor(R.styleable.StatisticBar_team2Color, Color.BLUE)
 
             drawPaint.color =
