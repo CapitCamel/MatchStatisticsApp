@@ -21,6 +21,7 @@ class StatisticProgressBar @JvmOverloads constructor(
     private var textPaint = TextPaint()
 
     private lateinit var container: RectF
+//    private var currentProgressValue: Float = 0.0f
 
     private var typedArray: TypedArray? = null
 
