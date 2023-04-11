@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatisticBar">
+        <attr name="team1Color" format="color" />
+        <attr name="team2Color" format="color" />
+        <attr name="drawColor" format="color" />
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="android:fontFamily" />
+    </declare-styleable>
+</resources>

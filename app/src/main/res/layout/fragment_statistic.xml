@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticFragment">
+
+    <com.example.matchstatisticsapp.StatisticProgressBar
+        android:id="@+id/statisticProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:team1Color="@color/team1"
+        app:team2Color="@color/team2"
+        app:textSize="18sp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/wins1Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_team1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/statisticProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/statisticProgressBar" />
+
+    <TextView
+        android:id="@+id/tvWin1Sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:maxLines="3"
+        android:text="@string/wins_1_team_txt"
+        app:layout_constraintBottom_toBottomOf="@+id/wins1Circle"
+        app:layout_constraintStart_toEndOf="@+id/wins1Circle"
+        app:layout_constraintTop_toTopOf="@+id/wins1Circle" />
+
+    <TextView
+        android:id="@+id/wins3Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/circle_draw"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvWin1Sum"
+        app:layout_constraintTop_toBottomOf="@+id/statisticProgressBar" />
+
+    <TextView
+        android:id="@+id/tvWin3Sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:maxLines="3"
+        android:text="@string/draw_team_txt"
+        app:layout_constraintBottom_toBottomOf="@+id/wins3Circle"
+        app:layout_constraintStart_toEndOf="@+id/wins3Circle"
+        app:layout_constraintTop_toTopOf="@+id/wins3Circle" />
+
+    <TextView
+        android:id="@+id/wins2Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/circle_team2"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvWin3Sum"
+        app:layout_constraintTop_toBottomOf="@+id/statisticProgressBar" />
+
+    <TextView
+        android:id="@+id/tvWin2Sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:maxLines="3"
+        android:text="@string/wins_2_team_txt"
+        app:layout_constraintBottom_toBottomOf="@+id/wins2Circle"
+        app:layout_constraintStart_toEndOf="@+id/wins2Circle"
+        app:layout_constraintTop_toTopOf="@+id/wins2Circle" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Личные встречи"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn" />
+
+    <TextView
+        android:id="@+id/tvSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/statistics"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="statisticProgressBar,wins1Circle,wins2Circle,wins3Circle,tvWin1Sum,tvWin2Sum,tvWin3Sum,textView2,tvSum" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Расчитать"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editWin3" />
+
+
+    <TextView
+        android:id="@+id/tvWin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Победа первой команды"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editWin1"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_frame"
+        android:inputType="number"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWin1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvWin1" />
+
+    <TextView
+        android:id="@+id/tvWin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="Победа второй команды"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWin1" />
+
+    <EditText
+        android:id="@+id/editWin2"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_frame"
+        android:inputType="number"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWin2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvWin2" />
+
+    <TextView
+        android:id="@+id/tvWin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="Ничья"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWin2" />
+
+    <EditText
+        android:id="@+id/editWin3"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_frame"
+        android:inputType="number"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWin3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvWin3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

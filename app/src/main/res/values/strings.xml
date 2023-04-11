@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Match Statistics App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wins_1_team_txt">Победы \nпервой \nкоманды</string>
+    <string name="draw_team_txt">Ничья</string>
+    <string name="wins_2_team_txt">Победы \nвторой \nкоманды</string>
+</resources>
